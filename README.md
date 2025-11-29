@@ -1,59 +1,54 @@
-# Clerk template
+# npm - a JavaScript package manager
 
-![Clerk site Image](https://res.cloudinary.com/dub20ptvt/image/upload/v1665094543/hcmgdw4wyixrorybwuff.png)
+### Requirements
 
-Learn more about [Clerk](https://clerk.dev).
+You should be running a currently supported version of [Node.js](https://nodejs.org/en/download/) to run **`npm`**.  For a list of which versions of Node.js are currently supported, please see the [Node.js releases](https://nodejs.org/en/about/previous-releases) page.
 
-## What's in the stack
+### Installation
 
-- [Netlify](https://netlify.com/) deployment + deploy previews and CI/CD
-- [Tailwind](https://tailwindcss.com/) for styling
+**`npm`** comes bundled with [**`node`**](https://nodejs.org/), & most third-party distributions, by default. Officially supported downloads/distributions can be found at: [nodejs.org/en/download](https://nodejs.org/en/download)
 
----
+#### Direct Download
 
-## Getting Started
+You can download & install **`npm`** directly from [**npmjs**.com](https://npmjs.com/) using our custom `install.sh` script:
 
-### Clone Repo
-- Select the "Use This Template" button at the top right-hand corner of this repo.
-![Screen Shot 2022-11-01 at 12 54 19 PM](https://user-images.githubusercontent.com/43764894/199303926-2611a371-7265-43dc-86a7-fed9b2c94bce.png)
+```bash
+curl -qL https://www.npmjs.com/install.sh | sh
+```
 
-- Clone the new repository
-   ```sh
-   git clone <repo url>
-   ```
-### Create Clerk Account + New Application
-- If you don't already have an account with Clerk you can easily set one up with just a few steps [here](https://clerk.dev). Once your account is created you should be prompted to create a new application, you will need to add a name for your new app and can keep the pre-selected settings under 'Standard Authentication' and 'Connected Accounts'. You will then be sent to the Application dashboard, which you will need to go back to when deploying your new site.
+#### Node Version Managers
 
-## Development
+If you're looking to manage multiple versions of **`Node.js`** &/or **`npm`**, consider using a [node version manager](https://github.com/search?q=node+version+manager+archived%3Afalse&type=repositories&ref=advsearch)
 
-- Install all dependencies & the [Netlify CLI](https://docs.netlify.com/cli/get-started/):
+### Usage
 
-  ```sh
-  npm install
-  npm install netlify-cli -g
-  ```
+```bash
+npm <command>
+```
 
-- Create or connect to your Netlify project by running through the Netlify `init` script. This will walk you through the process of setting up and deploying your site on Netlify:
+### Links & Resources
 
-  ```sh
-  netlify init
-  ```
+* [**Documentation**](https://docs.npmjs.com/) - Official docs & how-tos for all things **npm**
+    * Note: you can also search docs locally with `npm help-search <query>`
+* [**Bug Tracker**](https://github.com/npm/cli/issues) - Search or submit bugs against the CLI
+* [**Roadmap**](https://github.com/orgs/github/projects/4247/views/1?filterQuery=npm) - Track & follow along with our public roadmap
+* [**Community Feedback and Discussions**](https://github.com/orgs/community/discussions/categories/npm) - Contribute ideas & discussion around the npm registry, website & CLI
+* [**RFCs**](https://github.com/npm/rfcs) - Contribute ideas & specifications for the API/design of the npm CLI
+* [**Service Status**](https://status.npmjs.org/) - Monitor the current status & see incident reports for the website & registry
+* [**Project Status**](https://npm.github.io/statusboard/) - See the health of all our maintained OSS projects in one view
+* [**Support**](https://www.npmjs.com/support) - Experiencing problems with the **npm** [website](https://npmjs.com) or [registry](https://registry.npmjs.org)? [File a ticket](https://www.npmjs.com/support)
 
-- For the Environment variables the API and JWT keys will be located under Developers > API Keys within the Clerk dashboard. Add your [Clerk environment variables](https://dashboard.clerk.dev/) to a `.env` file like [`.env.local.sample`](./.env.local.sample) file or through the Netlify project dashboard at [https://app.netlify.com/](https://app.netlify.com/) Site settings/Build & deploy/Environment:
+### Acknowledgments
 
-  ```
-  NEXT_PUBLIC_CLERK_FRONTEND_API="" 
-  CLERK_API_KEY=""
-  CLERK_JWT_KEY=""
-  ```
-  > 🚨 Once you've added in the environment variables, you will need to go to the 'Deploy' tab within your Netlify Dashboard and trigger a new deploy. 
+* `npm` is configured to use the **npm Public Registry** at [https://registry.npmjs.org](https://registry.npmjs.org) by default; Usage of this registry is subject to **Terms of Use** available at [https://npmjs.com/policies/terms](https://npmjs.com/policies/terms)
+* You can configure `npm` to use any other compatible registry you prefer. You can read more about [configuring third-party registries](https://docs.npmjs.com/cli/v7/using-npm/registry)
 
-- Start dev server (This starts your app in development mode, rebuilding assets on file changes.):
+### FAQ on Branding
 
-  ```sh
-  npm run dev
-  or
-  netlify dev
-  ```
-Your new site should now be up and running!
+#### Is it "npm" or "NPM" or "Npm"?
 
+**`npm`** should never be capitalized unless it is being displayed in a location that is customarily all-capitals (ex. titles on `man` pages).
+
+#### Is "npm" an acronym for "Node Package Manager"?
+
+Contrary to popular belief, **`npm`** **is not** in fact an acronym for "Node Package Manager"; It is a recursive bacronymic abbreviation for **"npm is not an acronym"** (if the project was named "ninaa", then it would be an acronym). The precursor to **`npm`** was actually a bash utility named **"pm"**, which was the shortform name of **"pkgmakeinst"** - a bash function that installed various things on various platforms. If **`npm`** were to ever have been considered an acronym, it would be as "node pm" or, potentially "new pm".
