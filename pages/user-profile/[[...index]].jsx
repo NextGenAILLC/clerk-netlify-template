@@ -1,9 +1,12 @@
 import { UserProfile } from '@clerk/nextjs'
+import Head from 'next/head'
 
 const UserProfilePage = () => (
-  <div className="relative h-full p-1 mb-2 sm:flex sm:items-center sm:justify-center md:pb-4 lg:p-0">
+  <main className="profile-page">
+    <Head><title>Your profile | Clerk + Netlify Starter</title></Head>
+    <div className="profile-intro"><p className="eyebrow">Your account</p><h1>Profile settings</h1><p>Keep your details and sign-in methods up to date.</p></div>
     <UserProfile />
-  </div>
+  </main>
 )
 
 export default UserProfilePage
